@@ -1,0 +1,39 @@
+\documentclass[a4j, dvipdfmx]{jsarticle}
+
+\usepackage{graphicx, color}
+\usepackage{jvlisting, listings}
+
+\lstset{
+ 	language = C,
+ 	backgroundcolor={\color[rgb]{1.0, 1.0, 1.0}},
+ 	breaklines = true,	
+ 	breakindent = 10pt,
+ 	basicstyle = \ttfamily\scriptsize,
+ 	commentstyle = \itshape\color[rgb]{0.5 , 0.5, 0.5},
+ 	classoffset = 0,
+ 	keywordstyle = \bfseries\color[rgb]{1.0, 0.0, 0.0},
+ 	stringstyle = \ttfamily\color[rgb]{0.0, 0.5, 0.0},
+ 	frame = TBrl,
+ 	framesep = 5pt,
+ 	numbers = left,
+ 	stepnumber = 1,
+ 	numberstyle = \tiny,
+ 	tabsize = 4,
+ 	captionpos = t
+}
+
+\begin{document}
+
+\section{ソースコード}
+ソースコード\ref{src:homework}に作成したコードを示す。
+\lstinputlisting[caption = 課題, label = src:homework]{src/homework.c}
+
+\section{工夫した点}
+ソースコード\ref{src:homework}にて工夫した点を次にまとめる。
+\begin{itemize}
+	\item continue文の活用により、while文内のネストを殲滅した。
+	\item 状態遷移の考え方を導入することにより、わかりやすいコードを書けた。
+	\item 表示の更新を行うまでの0.5秒間に押されるスイッチの検知を可能とした。
+\end{itemize}
+
+\end{document}
